@@ -1,6 +1,11 @@
 name: First Workflow
 
-on: [push]
+on: 
+  push:
+  pull_request:
+    types: [opened, reopened]
+  schedule:
+    - cron: "0/12 * * * *"
 
 jobs:
   shell-test:
@@ -17,7 +22,7 @@ jobs:
       - name: before the repo
         run: |
           ls -latr
-          
+
       - name: clone now 
         uses: actions/checkout@v1
       
