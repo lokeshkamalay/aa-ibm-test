@@ -1,0 +1,15 @@
+name: First Workflow
+
+on: [push]
+
+jobs:
+  shell-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello To World
+        run: echo "Hello World"
+      - name: Say Hi to Python
+        shell: python
+        run: |
+           import os
+           os.system('echo "hello python"', shell=True)
