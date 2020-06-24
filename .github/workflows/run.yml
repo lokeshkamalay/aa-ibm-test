@@ -14,9 +14,13 @@ jobs:
            import os
            os.system('echo "hello python"')
       
-      - name: clone the repo
+      - name: before the repo
         run: |
           ls -latr
+          
+      - name: clone now 
         uses: actions/checkout@v1
+      
+      - name: after the repo
         run : |
           ls -latr
