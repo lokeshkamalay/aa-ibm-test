@@ -13,3 +13,8 @@ jobs:
         run: |
            import os
            os.system('echo "hello python"')
+      
+      - name: clone the repo
+        run: |
+          ls -latr
+          
