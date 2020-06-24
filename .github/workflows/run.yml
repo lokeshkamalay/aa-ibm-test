@@ -17,4 +17,6 @@ jobs:
       - name: clone the repo
         run: |
           ls -latr
-          
+        uses: actions/checkout@v1
+        run : |
+          ls -latr
