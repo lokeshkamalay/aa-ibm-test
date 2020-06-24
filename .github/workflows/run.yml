@@ -12,4 +12,4 @@ jobs:
         shell: python
         run: |
            import os
-           os.system('echo "hello python"', shell=True)
+           os.system('echo "hello python"')
