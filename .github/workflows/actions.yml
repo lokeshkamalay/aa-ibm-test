@@ -23,9 +23,22 @@ jobs:
         run: |
           ls -latr
 
-      - name: clone now 
+      - name: clone now
+        id: clone
         uses: actions/checkout@v1
       
       - name: after the repo
         run : |
           ls -latr
+
+name: Dependent Workflow
+on:
+  push:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VM
+        run: echo "Hello CD"
+        needs: clone
