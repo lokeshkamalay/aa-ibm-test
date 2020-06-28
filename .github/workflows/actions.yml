@@ -32,8 +32,8 @@ jobs:
           ls -latr
 
   deployment:
+    needs: shell-test
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to VM
         run: echo "Hello CD"
-        needs: clone
